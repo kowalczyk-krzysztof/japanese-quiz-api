@@ -27,7 +27,7 @@ app.use(
         scriptSrcAttr: ["'none'"],
         styleSrc: ["'self'", "https:", "'unsafe-inline'"],
         upgradeInsecureRequests: [],
-        "connect-src": ["'self'", `${process.env.FRONTEND_URI}`],
+        "connect-src": ["'self'", "*"],
       },
     },
   })
@@ -39,5 +39,5 @@ app.set("trust proxy", 1)
 const PORT = (process.env.PORT as unknown as number) || 8080
 
 export const server = app.listen(PORT, (): void => {
-  console.log(`Server is up and running @ ${process.env.API_URI}${PORT} in ${process.env.NODE_ENV} mode`)
+  console.log(`Server is up and running @${PORT} in ${process.env.NODE_ENV} mode`)
 })
