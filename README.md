@@ -14,9 +14,9 @@ type Word {
 ### Example output:
 ```json
 { 
-  "word":"渉外",
-  "wordExists":true,
-  "reading":"しょうがい",
+  "word": "渉外",
+  "wordExists": true,
+  "reading": "しょうがい",
   "definitions": [
     "public relations",
     "client liaison",
