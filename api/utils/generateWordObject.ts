@@ -1,11 +1,11 @@
 import { dictionarySearch } from "./dictionarySearch"
 import { generateRandomNumber } from "./generateRandomNumber"
 
-export interface Word {
-  word: string
-  wordExists: boolean
-  reading: string
-  definitions: string[]
+type Word = {
+  readonly word: string
+  readonly wordExists: boolean
+  readonly reading: string
+  readonly definitions: string[]
 }
 
 export const generateWordObject = (input: string): Word => {

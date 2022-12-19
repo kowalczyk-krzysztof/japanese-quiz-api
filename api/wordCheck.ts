@@ -4,7 +4,7 @@ import { generateWordObject } from "./utils/generateWordObject"
 
 export default async (_: Request, res: Response) => {
   try {
-    const generatedWord: string = generateWord()
+    const generatedWord = generateWord()
     const result = generateWordObject(generatedWord)
     res.setHeader("Access-Control-Allow-Origin", "*").status(200).json(result)
   } catch (err) {

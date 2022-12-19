@@ -1,6 +1,6 @@
 const dictionary = require("../../data/jmdict.json")
 
-export type DictionaryObject = {
+type DictionaryObject = {
   readonly kanji: string[]
   readonly kana: string[]
   readonly definition: string[][]
