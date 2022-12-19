@@ -1,4 +1,4 @@
-import { seachInDictionary } from "./seachInDictionary"
+import { searchInDictionary } from "./searchInDictionary"
 import { getRandomIntBetweenInclusive } from "./getRandomIntBetweenInclusive"
 import { replaceWithNoma } from "./replaceWithNoma"
 
@@ -10,7 +10,7 @@ type WordDto = {
 }
 
 export const mapToWordDto = (input: string): WordDto => {
-  const words = seachInDictionary(input)
+  const words = searchInDictionary(input)
   if (!words.length)
     return {
       word: input,

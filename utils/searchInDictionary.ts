@@ -12,5 +12,5 @@ type Dictionary = {
 
 const { words } = dictionary as Dictionary
 
-export const seachInDictionary = (input: string): DictionaryDto[] =>
+export const searchInDictionary = (input: string): DictionaryDto[] =>
   words.filter(({ kanji }) => kanji.some((k) => (input.length === 1 ? k.includes(input) : k === input)))
