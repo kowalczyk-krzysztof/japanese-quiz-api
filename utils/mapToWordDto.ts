@@ -1,5 +1,6 @@
 import { seachInDictionary } from "./seachInDictionary"
 import { getRandomIntBetweenInclusive } from "./getRandomIntBetweenInclusive"
+import { replaceWithNoma } from "./replaceWithNoma"
 
 type WordDto = {
   readonly word: string
@@ -19,10 +20,11 @@ export const mapToWordDto = (input: string): WordDto => {
     }
   const random = getRandomIntBetweenInclusive(0, words.length - 1)
   const foundManyResults = words.length > 1
+  const word = words[foundManyResults ? random : 0].kanji[0]
   return {
-    word: foundManyResults ? words[random].kanji[0] : words[0].kanji[0],
+    word: replaceWithNoma(word[0], word[1]),
     wordExists: true,
-    reading: foundManyResults ? words[random].kana[0] : words[0].kana[0],
-    definitions: words[foundManyResults ? random : 0].definition[0].map((el) => el),
+    reading: words[foundManyResults ? random : 0].kana[0],
+    definitions: words[foundManyResults ? random : 0].definitions[0].flat(),
   }
 }

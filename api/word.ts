@@ -9,6 +9,6 @@ export default async (_: Request, res: Response) => {
     res.setHeader("Access-Control-Allow-Origin", "*").status(200).json(result)
   } catch (e) {
     console.log(e)
-    res.status(404).json(e)
+    res.status(500).json(e)
   }
 }

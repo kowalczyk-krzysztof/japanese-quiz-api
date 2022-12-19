@@ -3,7 +3,7 @@ import dictionary from "../data/jmdict.json"
 type DictionaryDto = {
   readonly kanji: string[]
   readonly kana: string[]
-  readonly definition: string[][]
+  readonly definitions: string[][]
 }
 
 type Dictionary = {
@@ -13,6 +13,4 @@ type Dictionary = {
 const { words } = dictionary as Dictionary
 
 export const seachInDictionary = (input: string): DictionaryDto[] =>
-  input.length === 1
-    ? words.filter((el: DictionaryDto) => el.kanji.some((el) => el.includes(input)))
-    : words.filter((el: DictionaryDto) => el.kanji.some((el) => el === input))
+  words.filter(({ kanji }) => kanji.some((k) => (input.length === 1 ? k.includes(input) : k === input)))
