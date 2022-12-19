@@ -2,7 +2,7 @@
   "name": "kanjiquiz-api",
   "version": "1.0.0",
   "description": "An educational game to test your Japanese vocabulary",
-  "main": "wordCheck.js",
+  "main": "word.js",
   "scripts": {
     "start": "vercel dev",
     "deploy": "vercel deploy --prod"

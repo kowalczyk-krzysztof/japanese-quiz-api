@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
     "target": "es2017",
-    "module": "commonjs",
-    "rootDir": "./api",
+    "module": "ESNext",
+    "moduleResolution": "NodeNext",
+    "resolveJsonModule": true,
+    "rootDir": "./",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
