@@ -6,7 +6,7 @@ export default async (_: Request, res: Response) => {
   try {
     const generatedWord: string = generateWord()
     const result = generateWordObject(generatedWord)
-    res.status(200).json(result)
+    res.setHeader("Access-Control-Allow-Origin", "*").status(200).json(result)
   } catch (err) {
     console.log(err)
     res.status(404).json({
