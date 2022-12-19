@@ -1,6 +1,6 @@
 import dictionary from "../data/jmdict.json"
 
-type DictionaryDto = {
+export type DictionaryDto = {
   readonly kanji: string[]
   readonly kana: string[]
   readonly definitions: string[][]

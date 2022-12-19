@@ -1,11 +1,13 @@
 import { Request, Response } from "express"
 import { generateWord } from "../utils/generateWord"
 import { mapToWordDto } from "../utils/mapToWordDto"
+import { searchInDictionary } from "../utils/searchInDictionary"
 
 export default async (_: Request, res: Response) => {
   try {
     const generatedWord = generateWord()
-    const result = mapToWordDto(generatedWord)
+    const words = searchInDictionary(generatedWord)
+    const result = mapToWordDto(generatedWord, words)
     res.setHeader("Access-Control-Allow-Origin", "*").status(200).json(result)
   } catch (e) {
     console.log(e)
