@@ -5,11 +5,11 @@ Generate a random 2-kanji word and check whether it exists
 ### Output:
 
 ```typescript
-type WordDto {
- readonly word: string,
- readonly wordExists: boolean,
- readonly reading: string,
- readonly definitions: string[]
+{
+ word: string,
+ wordExists: boolean,
+ reading: string,
+ definitions: Array<string>
 }
 ```
 
