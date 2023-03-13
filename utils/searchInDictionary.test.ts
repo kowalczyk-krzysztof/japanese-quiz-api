@@ -1,4 +1,4 @@
-import { searchInDictionary } from "./searchInDictionary"
+import { searchInDictionary } from "./searchInDictionary.js"
 
 describe("two-kanji words dictionary searching", () => {
   it("gets a list of all words containing 狸", () => {

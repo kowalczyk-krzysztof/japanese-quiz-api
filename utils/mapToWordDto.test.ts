@@ -1,4 +1,4 @@
-import { mapToWordDto } from "./mapToWordDto"
+import { mapToWordDto } from "./mapToWordDto.js"
 
 describe("mapping to WordDto object", () => {
   it("maps input to WordDto object", () => {

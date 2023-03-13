@@ -1,4 +1,4 @@
-import { replaceWithNoma } from "./replaceWithNoma"
+import { replaceWithNoma } from "./replaceWithNoma.js"
 
 describe("replacing repeating kanji with 々", () => {
   it("replaces the second repeating kanji with 々", () => {

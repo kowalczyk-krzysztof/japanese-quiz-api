@@ -1,4 +1,4 @@
-import { generateWord } from "./generateWord"
+import { generateWord } from "./generateWord.js"
 
 const kanjiRegex = new RegExp(/[一-龯]/)
 

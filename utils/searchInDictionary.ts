@@ -1,4 +1,6 @@
-import dictionary from "../data/jmdict.json"
+import { createRequire } from "module"
+const require = createRequire(import.meta.url)
+const dictionary = require("../data/jmdict.json")
 
 export type DictionaryDto = {
   readonly kanji: string[]

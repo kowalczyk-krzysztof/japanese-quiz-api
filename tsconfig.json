@@ -1,14 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es2019",
-    "module": "ESNext",
-    "moduleResolution": "NodeNext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "esnext",
+    "sourceMap": false,
     "resolveJsonModule": true,
-    "rootDir": "./",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "noUnusedLocals": true
+    "esModuleInterop": true
   }
 }

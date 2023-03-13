@@ -1,7 +1,7 @@
 import { Request, Response } from "express"
-import { generateWord } from "../utils/generateWord"
-import { mapToWordDto } from "../utils/mapToWordDto"
-import { searchInDictionary } from "../utils/searchInDictionary"
+import { generateWord } from "../utils/generateWord.js"
+import { mapToWordDto } from "../utils/mapToWordDto.js"
+import { searchInDictionary } from "../utils/searchInDictionary.js"
 
 export default async (_: Request, res: Response) => {
   try {

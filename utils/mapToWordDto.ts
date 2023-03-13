@@ -1,6 +1,6 @@
-import { DictionaryDto } from "./searchInDictionary"
-import { getRandomIntBetweenInclusive } from "./getRandomIntBetweenInclusive"
-import { replaceWithNoma } from "./replaceWithNoma"
+import { DictionaryDto } from "./searchInDictionary.js"
+import { getRandomIntBetweenInclusive } from "./getRandomIntBetweenInclusive.js"
+import { replaceWithNoma } from "./replaceWithNoma.js"
 
 type WordDto = {
   readonly word: string
